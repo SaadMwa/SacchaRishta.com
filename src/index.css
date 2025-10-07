@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Royal Gold #D4AF37 */
+    --royal-gold: 43 69% 52%;
+    
+    /* Deep Maroon #4B0000 */
+    --deep-maroon: 0 100% 15%;
+    
+    /* Ivory White #FFF8E7 */
+    --ivory: 45 100% 95%;
+    
+    /* Warm Beige #E5C29F */
+    --warm-beige: 33 58% 76%;
+    
+    /* Soft Black #1C1C1C */
+    --soft-black: 0 0% 11%;
+    
+    --background: 45 100% 95%;
+    --foreground: 0 0% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 11%;
+
+    --primary: 43 69% 52%;
+    --primary-foreground: 0 0% 11%;
+
+    --secondary: 33 58% 76%;
+    --secondary-foreground: 0 0% 11%;
+
+    --muted: 33 58% 76%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 43 69% 52%;
+    --accent-foreground: 0 0% 11%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 33 58% 76%;
+    --input: 33 58% 76%;
+    --ring: 43 69% 52%;
+
+    --radius: 0.75rem;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--deep-maroon)), hsl(0 100% 20%));
+    --gradient-maroon-gold: linear-gradient(135deg, hsl(var(--deep-maroon)), hsl(var(--royal-gold) / 0.2));
+    --gradient-ivory: linear-gradient(180deg, hsl(var(--ivory)), hsl(var(--warm-beige) / 0.3));
+    
+    /* Shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--royal-gold) / 0.2);
+    --shadow-card: 0 4px 20px -2px hsl(0 0% 0% / 0.1);
+    --glow-gold: 0 0 20px hsl(var(--royal-gold) / 0.4);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 0 100% 15%;
+    --foreground: 45 100% 95%;
+
+    --card: 0 100% 20%;
+    --card-foreground: 45 100% 95%;
+
+    --popover: 0 100% 20%;
+    --popover-foreground: 45 100% 95%;
+
+    --primary: 43 69% 52%;
+    --primary-foreground: 0 0% 11%;
+
+    --secondary: 33 58% 76%;
+    --secondary-foreground: 0 0% 11%;
+
+    --muted: 0 100% 20%;
+    --muted-foreground: 33 58% 76%;
+
+    --accent: 43 69% 52%;
+    --accent-foreground: 0 0% 11%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 45 100% 95%;
+
+    --border: 33 58% 76%;
+    --input: 0 100% 20%;
+    --ring: 43 69% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
